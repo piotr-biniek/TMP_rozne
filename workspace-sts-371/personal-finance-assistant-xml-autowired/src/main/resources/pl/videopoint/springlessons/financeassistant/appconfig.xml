@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+
+<context:annotation-config/>
+
+
+
+	<bean id="fileCurrencyRateProvider"
+		class="pl.videopoint.springlessons.financeassistant.services.FileCurrencyRateProvider">
+
+<!-- róne wiązania kondtruktorów przez xml -->
+		<constructor-arg name="maxCnt" value="10" />
+		<constructor-arg name="fileName" value="pliknowy.xml" />
+<!-- 		konstruktor po name z konstruktora ponoc trzeba podac adnotacje ale działa też bez  -->
+
+
+<!-- 		<constructor-arg index="1" value="10" /> -->
+<!-- 		<constructor-arg index="0" value="pliknowy.xml" /> -->
+
+<!-- 		<constructor-arg type="int" value="10" /> -->
+<!-- 		<constructor-arg type="java.lang.String" value="pliknowy.xml" /> -->
+
+<!-- 		<constructor-arg value="pliknowy.xml" /> -->
+<!-- 		<constructor-arg value="10" /> -->
+		<!-- inicjalizacja wartości w konstruktorze ważna kolejnosc -->
+
+		<!-- <property name="fileName" value="plik.xml"></property> -->
+		<!-- inicjalizacja settera!!!! z wartością w XML -->
+
+	</bean>
+	
+<!-- 	autowire="default" oznacza standardowo nie!! my uzywamy byType -->
+<!-- mozna usunąć autowire="byType" pod warunkiem ustawienia w adnotacjach trgo -->
+<!-- dodajemy context w namespaces - na dple zakładka -->
+	<bean id="rateConversionService" 
+		class="pl.videopoint.springlessons.financeassistant.services.RateConversionService">
+<!-- 		<property name="rateProvider" ref="fileCurrencyRateProvider"></property> usuwamy to jako zbedne i u góru podajemy w beanie autowire - bez tego nie pójdzie -->
+		<property name="supportedCurr">
+			<set>
+				<value>EUR</value>
+				<value>USD</value>
+
+
+
+
+			</set>
+
+
+		</property>
+
+
+	</bean>
+
+</beans>

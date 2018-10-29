@@ -1,0 +1,42 @@
+package pl.videopoint.springlessons.financeassistant.dto;
+
+import java.math.BigDecimal;
+import java.util.Date;
+
+public class CurrencyRate {
+	private String currency;
+	private java.util.Date data;
+	private BigDecimal rate;
+	
+	
+	public CurrencyRate(String currency, Date data, BigDecimal rate) {
+		super();
+		this.currency = currency;
+		this.data = data;
+		this.rate = rate;
+	}
+	public String getCurrency() {
+		return currency;
+	}
+	public void setCurrency(String currency) {
+		this.currency = currency;
+	}
+	public java.util.Date getData() {
+		return data;
+	}
+	public void setData(java.util.Date data) {
+		this.data = data;
+	}
+	public BigDecimal getRate() {
+		return rate;
+	}
+	public void setRate(BigDecimal rate) {
+		this.rate = rate;
+	}
+	
+	
+	
+	
+	
+
+}

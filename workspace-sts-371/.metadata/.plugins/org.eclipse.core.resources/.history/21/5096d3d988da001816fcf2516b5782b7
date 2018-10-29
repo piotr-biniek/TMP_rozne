@@ -1,0 +1,5 @@
+package pl.videopoint.springlessons.financeassistant.dto;
+
+public class CurrencyRate {
+
+}

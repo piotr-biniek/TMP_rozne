@@ -1,0 +1,7 @@
+package pl.videopoint.springlessons.financeassistant.dao;
+
+public interface CurrencyRateDao {
+
+	
+	
+}

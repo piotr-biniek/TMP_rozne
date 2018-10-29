@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+			<item value="pl.biniek.java.spring"/>
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+			<item value="personal-finance-asistant"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+		<list key="ciManagementUrl">
+		</list>
+		<list key="ciManagementSystem">
+		</list>
+		<list key="issueManagementSystem">
+		</list>
+		<list key="issueManagementUrl">
+		</list>
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="D:\java-studia\spring\workspace-sts-371"/>
+			<item value="D:\java-studia\spring\workspace-sts-371\personal-finance-assistant-autowired2test"/>
+			<item value="D:\java-studia\Spring_nauka\Spring. Poziom pierwszy. Prosty sposób na zaawansowane aplikacje\Spring_poziom1_videopoint\vsprku\personal-finance-assistant-02-11"/>
+			<item value="D:\java-studia\spring\workspace-sts-371\personal-finance-assistant-propertysource-1-26 uraszczamycostam"/>
+			<item value="D:\java-studia\spring\workspace-sts-371\"/>
+			<item value="D:\java-studia\Spring_nauka\Spring. Poziom pierwszy. Prosty sposób na zaawansowane aplikacje\Spring_poziom1_videopoint"/>
+			<item value="D:\java-studia\spring\workspace-sts-371\personal-finance-assistant-log4J\pom.xml"/>
+			<item value="C:\Users\piotr\Videos\Captures\Spring. Poziom pierwszy. Prosty sposób na zaawansowane aplikacje\Spring_poziom1_videopoint\vsprku\personal-finance-assistant-01-26"/>
+			<item value="C:\Users\piotr\Videos\Captures\Spring. Poziom pierwszy. Prosty sposób na zaawansowane aplikacje\Spring_poziom1_videopoint\vsprku\personal-finance-assistant-01-27"/>
+			<item value="C:\Users\piotr\Videos\Captures\Spring. Poziom pierwszy. Prosty sposób na zaawansowane aplikacje\Spring_poziom1_videopoint\vsprku\personal-finance-assistant-01-18"/>
+			<item value="C:\Users\piotr\Videos\Captures\Spring. Poziom pierwszy. Prosty sposób na zaawansowane aplikacje\Spring_poziom1_videopoint\vsprku\personal-finance-assistant-01-05"/>
+			<item value="C:\Users\piotr\Videos\Captures\Spring. Poziom pierwszy. Prosty sposób na zaawansowane aplikacje\Spring_poziom1_videopoint\vsprku\personal-finance-assistant-01-07"/>
+			<item value="C:\Users\piotr\Videos\Captures\Spring. Poziom pierwszy. Prosty sposób na zaawansowane aplikacje\Spring_poziom1_videopoint\vsprku"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+		</list>
+		<list key="groupId">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+</section>

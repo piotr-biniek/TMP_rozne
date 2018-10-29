@@ -1,0 +1,22 @@
+package pl.videopoint.springlessons.financeassistant;
+
+import javax.sql.DataSource;
+
+import org.apache.commons.dbcp2.BasicDataSource;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class DataBaseConfig {
+	@Bean
+	public DataSource dataSourcr(){
+		BasicDataSource source = new BasicDataSource();
+		source.setDriverClassName("org.h2.driver");
+		
+		
+	}
+	
+	
+	
+	
+
+}

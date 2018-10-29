@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="personal-finance-assistant-przerobione-z126-laczenie konfiguracji"/>
+<aop-project name="personal-finance-assistant-jdbcSpring"/>
+<aop-project name=" personal-finance-assistant-jdbcSpring - mapowanie wiersza na obiekt"/>
+</aop-reference-model>

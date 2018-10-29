@@ -1,0 +1,13 @@
+package pl.videopoint.springlessons.financeassistant.dto;
+
+import java.math.BigDecimal;
+
+public class CurrencyRate {
+	private String currency;
+	private java.util.Date data;
+	private BigDecimal rate;
+	
+	
+	
+
+}

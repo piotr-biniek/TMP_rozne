@@ -1,0 +1,55 @@
+package pl.videopoint.springlessons.financeassistant;
+
+import java.math.BigDecimal;
+import java.sql.Array;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.text.ParseException;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import pl.videopoint.springlessons.financeassistant.dto.CurrencyRate;
+import pl.videopoint.springlessons.financeassistant.services.RateConversionService;
+import pl.videopoint.springlessons.financeassistant.services.RateUpdateService;
+
+public class ConsoleApplication {
+
+	public static void main(String[] args) throws ParseException {
+		ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class, AppConfigProd.class);
+		RateConversionService service = context.getBean(RateConversionService.class);
+		service.convertAmount(BigDecimal.valueOf(123.00), "EUR");
+		
+		RateUpdateService rus = context.getBean(RateUpdateService.class);
+		rus.storeRate(new CurrencyRate("USD",new Date(), BigDecimal.valueOf(3.3378)));
+		
+		
+		
+		
+		List<CurrencyRate> listOfRates = new ArrayList<CurrencyRate>();
+		for (int i = 0; i < 100; i++) {
+			listOfRates.add(new CurrencyRate("USD", new Date(), BigDecimal.valueOf(3.3333)));
+			//String string = 100[i];
+			
+		}
+		
+			
+		rus.storeManyRates(listOfRates);
+	
+			
+		
+		
+		
+		System.out.println("JDBC SPRING MY!!!!!!!");
+		System.out.println();
+
+	}
+
+}
+
+// przy dodawaniu log4j potrzeba dodoać most slf4j do log4j, wylaczyc springowe logowanie, kilka wpisów w pom.xml
+// utworzyc konfig log4j z pliku xml

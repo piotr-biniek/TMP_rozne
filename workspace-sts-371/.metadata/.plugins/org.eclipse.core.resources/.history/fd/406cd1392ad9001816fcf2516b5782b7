@@ -1,0 +1,5 @@
+package pl.videopoint.springlessons.financeassistant.dao;
+
+public class JdbcCurrencyRateDao {
+
+}

@@ -1,0 +1,5 @@
+eclipse.preferences.version=1
+encoding//src/main/java/pl/videopoint/springlessons/financeassistant/AppConfig.java=UTF-8
+encoding//src/main/java/pl/videopoint/springlessons/financeassistant/AppConfigCommon.java=UTF-8
+encoding//src/main/java/pl/videopoint/springlessons/financeassistant/ConsoleApplication.java=UTF-8
+encoding//src/main/java/pl/videopoint/springlessons/financeassistant/dao/JdbcCurrencyRateDao.java=UTF-8

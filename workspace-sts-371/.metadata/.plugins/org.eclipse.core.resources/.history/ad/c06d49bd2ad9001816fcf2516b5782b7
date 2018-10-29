@@ -1,0 +1,20 @@
+package pl.videopoint.springlessons.financeassistant.dao;
+
+import javax.sql.DataSource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
+
+@Repository// oznacza specjalny komponent sprong z dostepem do danych
+public class JdbcCurrencyRateDao {
+	private JdbcTemplate jdbcTemplate;
+	
+	@Autowired
+	public void setDataSource(DataSource dataSource){
+		
+		jdbcTemplate = new JdbcTemplate(dataSource);
+		
+	}
+
+}
