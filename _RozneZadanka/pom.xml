@@ -5,6 +5,15 @@
     <artifactId>_RozneZadanka</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
+    <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+<dependencies>
+    <dependency>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-lang3</artifactId>
+    <version>3.0</version>
+</dependency>
+</dependencies>
+
     <modules>
         <module>_TestyIZadaniaRozne</module>
         <module>UcztujacyFilozofowie</module>
