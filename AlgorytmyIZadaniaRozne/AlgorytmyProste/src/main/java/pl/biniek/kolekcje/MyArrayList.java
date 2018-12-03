@@ -17,9 +17,9 @@ import java.util.Objects;
  */
 public class MyArrayList<T> implements List<T> {//todo naniedziele
 
-    Object[] elements;
+    private Object[] elements;
     // int elements.length;
-    int actualSize;
+    private int actualSize;
 
     /**
      * constructs list of expected size
@@ -207,10 +207,12 @@ public class MyArrayList<T> implements List<T> {//todo naniedziele
     @Override
     public T remove(int index) {
         T tmp = (T) elements[index];
+        elements[index]=null;
         for (int i = index; i < actualSize - 1; i++) {
             elements[i] = elements[i + 1];
 
         }
+        actualSize--;
         return tmp;
     }
 
