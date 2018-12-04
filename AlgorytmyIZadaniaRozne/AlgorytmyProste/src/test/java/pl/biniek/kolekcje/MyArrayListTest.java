@@ -11,21 +11,56 @@ import java.util.List;
 import java.util.ListIterator;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import org.junit.Before;
+import org.junit.BeforeClass;
 
 /**
  *
  * @author piotr
  */
 public class MyArrayListTest {
+    MyArrayList emptyList = new MyArrayList<>();
+    MyArrayList<CarForListTest> carList = new MyArrayList<>();
+    MyArrayList<Integer> list10 = new MyArrayList<>(11);
+    MyArrayList<Integer> intList = new MyArrayList<>();
+   // MyArrayList<Integer> intList10 = new MyArrayList<>();
+    
     
     public MyArrayListTest() {
     }
 
+        @BeforeClass
+    public static void setUpClass() {
+    }
+    
+        @Before
+    public void setUp() {
+            for (int i = 0; i < 20; i++) {
+                intList.add(i);
+            }
+            for (int i = 0; i < 10; i++) {
+                list10.add(i);
+                
+               
+            }
+            for (int i = 0; i < 20; i++) {
+                CarForListTest car = new CarForListTest(i);
+                carList.add(car);
+            }
+            
+        
+    }
+    
+    
     /**
      * basic test of simple functions
      */
-    @Test
+    
+    
+    
+    
     public void testOfSimpleFunctionsOfMyArray() {
+        System.out.println("simpleTest");
         MyArrayList<Long> myList = new MyArrayList<>();
         assertTrue(myList.isEmpty());
         
@@ -50,58 +85,96 @@ public class MyArrayListTest {
     /**
      * Test of isEmpty method, of class MyArrayList.
      */
-   // @Test
+    @Test
     public void testIsEmpty() {
         System.out.println("isEmpty");
-        MyArrayList instance = new MyArrayList();
-        boolean expResult = false;
-        boolean result = instance.isEmpty();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+          assertTrue(emptyList.isEmpty()); 
+          assertFalse(carList.isEmpty()); 
+          assertFalse(intList.isEmpty()); 
+          
+          
+          
+          
     }
 
     /**
      * Test of contains method, of class MyArrayList.
      */
-   // @Test
+    @Test
     public void testContains() {
-        System.out.println("contains");
-        Object o = null;
-        MyArrayList instance = new MyArrayList();
-        boolean expResult = false;
-        boolean result = instance.contains(o);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertTrue(carList.contains(new CarForListTest(1)));
+        assertFalse(emptyList.contains(new CarForListTest(1)));
+        assertTrue(intList.contains(1));
+        assertFalse(intList.contains(25));
+        intList.add(25);
+        assertTrue(intList.contains(25));
+        
+        
     }
 
     /**
      * Test of iterator method, of class MyArrayList.
      */
-  //  @Test
+   @Test
     public void testIterator() {
         System.out.println("iterator");
-        MyArrayList instance = new MyArrayList();
-        Iterator expResult = null;
-        Iterator result = instance.iterator();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       Iterator<CarForListTest> iterCar = carList.iterator();
+       Iterator<Integer> iterInt = intList.iterator();
+       
+       while(iterCar.hasNext()){
+           System.out.println(" iterator car test "+iterCar.next());
+           
+       }
+       while(iterCar.hasNext()){
+           System.out.println(" iterator int test "+iterInt.next());
+           
+       }
+       
+       
     }
 
     /**
      * Test of toArray method, of class MyArrayList.
      */
-   // @Test
-    public void testToArray_0args() {
-        System.out.println("toArray");
-        MyArrayList instance = new MyArrayList();
-        Object[] expResult = null;
-        Object[] result = instance.toArray();
-        assertArrayEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    @Test
+    public void testToArray() {
+        Object testArray[]=new Object[10];
+        for (int i = 0; i < 10; i++) {
+                testArray[i]=i;
+            }
+        Object[] liczby = list10.toArray();
+               
+            assertArrayEquals(testArray, liczby);
+            
+           
+        
+    }
+    /**
+     * Test of second toArray method, of class MyArrayList.
+     */
+    @Test
+    public void testToArray2() {
+        Integer []testArray2=new Integer[10];
+        for (int i = 0; i < 10; i++) {
+                testArray2[i]=i;
+            }
+        System.out.println(list10.size());
+        Integer[] inty = list10.toArray(testArray2);
+               
+            assertArrayEquals(testArray2, inty);
+      ///////////////////////////////////////////////////////////////      
+       CarForListTest []cflt = new CarForListTest[20];
+              for (int i = 0; i < 20; i++) {
+                CarForListTest car = new CarForListTest(i);
+                cflt[i]=new CarForListTest(i);
+            }
+              
+           CarForListTest []cflt2=carList.toArray(cflt);
+           assertArrayEquals(cflt, cflt2);
+              
+              
+            
+        
     }
 
     /**

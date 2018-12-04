@@ -4,6 +4,7 @@
  */
 package pl.biniek.kolekcje;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Iterator;
@@ -78,9 +79,10 @@ public class MyArrayList<T> implements List<T> {//todo naniedziele
         return new MyIterator();
 
     }
-
+   
+   
     @Override
-    public Object[] toArray() {
+    public Object[] toArray() {//TODO poprawic na Arrays.copy of
         Object[] newArray = new Object[actualSize];
         for (int i = 0; i < actualSize; i++) {
             newArray[i] = elements[i];
