@@ -193,6 +193,9 @@ public class MyArrayList<T> implements List<T> {//todo naniedziele
 
     @Override
     public T get(int index) {
+        
+        if (actualSize<index) throw new IndexOutOfBoundsException("poza zakresem");
+        if(index<0) throw new IllegalArgumentException("mniej niz zero");
         return (T) elements[index];
     }
 
