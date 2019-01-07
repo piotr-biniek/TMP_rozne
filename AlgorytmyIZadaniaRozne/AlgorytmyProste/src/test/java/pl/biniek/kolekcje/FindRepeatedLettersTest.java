@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pl.biniek.collectiontest;
+package pl.biniek.kolekcje;
 
 import pl.biniek.kolekcje.FindRepeatediLetters;
 import java.util.LinkedHashMap;
