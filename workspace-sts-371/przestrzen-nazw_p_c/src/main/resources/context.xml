@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	
+	
+	<bean id="locale" class="java.util.Locale" factory-method="getDefault"/>
+	
+	<bean id="someUser" class="pl.biniek.User">
+	
+	<constructor-arg value="adam"/>
+	<constructor-arg value="25"/>
+	<constructor-arg ref="locale"/>
+	</bean>
+	
+	<bean id = "jakisBean" class="pl.biniek.JakisBean">
+	<property name="user" ref="someUser"></property>
+	<property name="stringValue" value="some value 100"></property>
+	<property name="intValue" value="100"></property>
+	
+	
+	
+	</bean>
+	
+<!-- gora i dół	równoważne dzieki przestrzeni nazw c i p -->
+		
+	
+	<bean id="someUser2" class="pl.biniek.User" c:name="Janek" c:age="32" c:loc-ref="locale"/>
+	<bean id = "jakisBean2" class="pl.biniek.JakisBean" p:intValue="10" p:stringValue="dupa" p:user-ref="someUser2" />
+
+
+<!-- można też definiować po numerach jak nizej to jesli skompilujemy bez nazw o debugowaniu	 -->
+	
+<bean id="someUser3" class="pl.biniek.User" c:_0="Janek" c:_1="32" c:_2-ref="locale"/>
+	
+	
+
+
+</beans>
